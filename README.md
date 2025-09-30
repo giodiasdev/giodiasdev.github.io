@@ -1,4 +1,4 @@
-# 👨‍💻 My Personal website
+# 👨‍💻 My personal website
 
 ## 📋 About
 
