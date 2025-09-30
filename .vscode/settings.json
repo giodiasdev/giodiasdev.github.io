@@ -1,0 +1,27 @@
+{
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": true
+    },
+    "[yaml]": {
+        "editor.tabSize": 2,
+    },
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "tailwindCSS.includeLanguages": {
+        "mdx": "html"
+    },
+    "github.copilot.chat.localeOverride": "en",
+}
