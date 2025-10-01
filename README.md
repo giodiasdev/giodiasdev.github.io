@@ -1,12 +1,14 @@
 # 👨‍💻 My personal website
 
+[![CI/CD](https://github.com/giodiasdev/giodiasdev.github.io/actions/workflows/CI-CD.yml/badge.svg)](https://github.com/giodiasdev/giodiasdev.github.io/actions/workflows/CI-CD.yml)
+
 ## 📋 About
 
 This repository contains the source code for my personal website and portfolio.
 
 ## 🌐 Live Site
 
-**Visit here**: [https://giodiasdev.github.io/](https://giodiasdev.github.io/)
+**Visit here**: [https://giodias.com](https://giodias.com)
 
 ## 🛠️ Tech Stack
 
