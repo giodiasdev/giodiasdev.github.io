@@ -1,5 +1,9 @@
 {
 	"name": "Node.js & TypeScript",
+	"runArgs": [
+		"--name",
+		"giodias-devcontainer"
+	],
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
 	"features": {},
 	"forwardPorts": [
