@@ -1,0 +1,34 @@
+
+{
+	"name": "giodias-devcontainer",
+	"runArgs": [ "--name", "giodias-devcontainer" ],
+	"image": "mcr.microsoft.com/devcontainers/base:trixie",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {}
+	},
+	"containerEnv": {
+		"DO_NOT_TRACK": "1"
+	},
+	"postCreateCommand": "./.devcontainer/post-create.sh",
+	"forwardPorts": [ 4321 ],
+	"portsAttributes": {
+		"4321": {
+			"label": "Development Server",
+			"onAutoForward": "silent"
+		},
+		"*": {
+			"onAutoForward": "ignore"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"astro-build.astro-vscode",
+				"bradlc.vscode-tailwindcss",
+				"mhutchie.git-graph",
+				"seatonjiang.gitmoji-vscode",
+				"unifiedjs.vscode-mdx"
+			]
+		}
+	}
+}
