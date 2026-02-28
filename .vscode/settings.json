@@ -6,12 +6,19 @@
         "editor.formatOnSave": true
     },
     "[javascriptreact]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
     },
     "[typescript]": {
         "editor.formatOnSave": true
     },
     "[typescriptreact]": {
         "editor.formatOnSave": true
-    }
+    },
+    "eslint.validate": [
+        "astro",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+    ]
 }
