@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-const { title } = Astro.props;
+const { title, description, keywords } = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description} keywords={keywords}>
     <main
         class="mx-auto mb-10 p-8 max-w-3xl sm:max-2-5xl md:max-w-7xl lg:max-w-9xl prose"
     >
