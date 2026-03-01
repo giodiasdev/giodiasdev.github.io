@@ -21,5 +21,11 @@
         "typescript",
         "typescriptreact",
     ],
-    "github.copilot.chat.localeOverride": "en"
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "github.copilot.chat.localeOverride": "en",
+    "tailwindCSS.includeLanguages": {
+        "mdx": "html"
+    }
 }

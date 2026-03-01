@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+.prose h1 {
+    @apply font-bold leading-tight tracking-tight mb-4 text-3xl;
+}
+
+.prose h2 {
+    @apply font-semibold leading-tight tracking-tight mt-8 mb-4 text-2xl;
+}
+
+.prose h3 {
+    @apply font-semibold leading-tight tracking-tight mt-5 mb-4 text-xl;
+}
+
+.prose h4 {
+    @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-lg;
+}
+
+.prose h5 {
+    @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-base;
+}
+
+.prose h6 {
+    @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-sm;
+}
+
+.prose p {
+    @apply mb-4 last:mb-0;
+}
+
+.prose a {
+    @apply transition-colors text-[#4a4a4a];
+    @variant hover {
+        @apply text-[#1a1a1a];
+    }
+    @variant dark {
+        @apply text-[#b3b3b3];
+        @variant hover {
+            @apply text-[#f0f0f0];
+        }
+    }
+}
+
+.prose ol {
+    @apply list-decimal list-inside mb-4;
+    @variant last {
+        @apply mb-0;
+    }
+}
+
+.prose ul {
+    @apply list-disc list-inside mb-4;
+    @variant last {
+        @apply mb-0;
+    }
+}
+
+.prose li {
+    @apply mb-1;
+    @variant last {
+        @apply mb-0;
+    }
+}
