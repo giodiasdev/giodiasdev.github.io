@@ -20,5 +20,6 @@
         "javascriptreact",
         "typescript",
         "typescriptreact",
-    ]
+    ],
+    "github.copilot.chat.localeOverride": "en"
 }
