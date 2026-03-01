@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import { loadEnv } from "vite";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 // eslint-disable-next-line no-undef
@@ -17,6 +18,6 @@ export default defineConfig({
     },
     site: env.SITE_URL,
     base: env.BASE_PATH,
-    integrations: [react(), mdx()],
+    integrations: [react(), mdx(), sitemap()],
     vite: { plugins: [tailwindcss()] },
 });
