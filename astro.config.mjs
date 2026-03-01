@@ -1,14 +1,14 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import react from '@astrojs/react';
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-    output: 'static',
+    output: "static",
     server: {
-        host: '0.0.0.0',
-        port: 4321
+        host: "0.0.0.0",
+        port: 4321,
     },
-    integrations: [react(), mdx()]
+    integrations: [react(), mdx()],
 });
