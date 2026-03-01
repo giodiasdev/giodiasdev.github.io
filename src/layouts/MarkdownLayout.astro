@@ -1,0 +1,12 @@
+---
+import ProseLayout from "./ProseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<ProseLayout
+    title={frontmatter.title}
+    description={frontmatter.description}
+    keywords={frontmatter.keywords}
+>
+    <slot />
+</ProseLayout>
