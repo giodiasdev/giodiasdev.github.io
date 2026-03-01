@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/BaseLayout.astro";
+---
+
+<Layout title="Not Found">
+    <main class="h-screen flex items-center justify-center">
+        <div class="m-auto text-center">
+            <h1 class="text-6xl font-bold">404</h1>
+            <h2 class="text-2xl">Page not found</h2>
+            <div class="mt-8">
+                <p>
+                    Sorry, the page that you are looking for could not be found.
+                </p>
+                <p>
+                    Please check the URL or return to the <a
+                        class="transition-colors text-[#4a4a4a] hover:text-[#1a1a1a] dark:text-[#b3b3b3] dark:hover:text-[#f0f0f0]"
+                        href="/">homepage</a
+                    >.
+                </p>
+            </div>
+        </div>
+    </main>
+</Layout>
