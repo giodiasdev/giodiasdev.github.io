@@ -11,6 +11,7 @@ export default defineConfig([
     globalIgnores([
         ".astro/",
         ".devcontainer/",
+        ".github/",
         ".husky/",
         ".vscode/",
         "dist/",

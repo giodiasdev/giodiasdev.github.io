@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+    paths: 
+      - '.github/workflows/**'
+      - 'src/**'
+      - 'astro.config.mjs'
+      - 'package-lock.json'
+      - 'package.json'
+      - 'tsconfig.json'
+
+permissions:
+  contents: read
+  pages: read
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    outputs:
+      site_url: ${{ steps.setup_pages.outputs.base_url }}
+      base_path: ${{ steps.setup_pages.outputs.base_path }}
+    steps:
+      - name: Setup Pages
+        id: setup_pages
+        uses: actions/configure-pages@v5
+  build:
+    name: Build
+    needs: setup
+    uses: ./.github/workflows/build.yml
+    with:
+      site_url: ${{ needs.setup.outputs.site_url }}
+      base_path: ${{ needs.setup.outputs.base_path }}
+      upload_artifact: false

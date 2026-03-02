@@ -1,5 +1,6 @@
 .astro
 .devcontainer
+.github
 .husky
 .vscode
 dist

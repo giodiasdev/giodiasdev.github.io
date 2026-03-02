@@ -1,0 +1,60 @@
+name: Build
+
+on:
+  workflow_call:
+    inputs:
+      site_url:
+        description: "Base URL for GitHub Pages"
+        required: true
+        type: string
+      base_path:
+        description: "Base path for GitHub Pages"
+        required: false
+        type: string
+        default: ""
+      upload_artifact:
+        description: "Upload build artifact to GitHub Pages"
+        required: false
+        default: false
+        type: boolean
+
+env:
+  DO_NOT_TRACK: 1
+  HUSKY: 0
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          cache: npm
+          node-version: '24'
+      - name: Restore Astro cache
+        uses: actions/cache@v5
+        with:
+          path: .astro
+          key: |
+            ${{ runner.os }}-astro-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('src/**/*', 'astro.config.mjs') }}
+          restore-keys: |
+            ${{ runner.os }}-astro-${{ hashFiles('**/package-lock.json') }}-
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint check
+        run: npm run lint
+      - name: Format check
+        run: npm run format:check
+      - name: Build project
+        env:
+          SITE_URL: ${{ inputs.site_url }}
+          BASE_PATH: ${{ inputs.base_path }}
+        run: npm run build
+      - name: Upload Pages artifact
+        if: inputs.upload_artifact == true
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./dist
