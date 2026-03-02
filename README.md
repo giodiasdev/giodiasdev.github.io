@@ -5,6 +5,7 @@ Welcome to my personal website! This is a portfolio and blog showcasing my work,
 ## 🛠️ Tech Stack
 
 - **Framework**: [Astro](https://astro.build)
+- **Styling**: Tailwind CSS
 - **Hosting**: GitHub Pages
 - **Version Control**: Git & GitHub
 

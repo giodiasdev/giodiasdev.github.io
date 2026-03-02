@@ -15,7 +15,7 @@ config.autoAddCss = false;
         <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="generator" content={Astro.generator} />
-        {title && <title>{title}</title>}
+        {title ? <title>{title} | giodias</title> : <title>giodias</title>}
         {description && <meta name="description" content={description} />}
         {keywords && <meta name="keywords" content={keywords.join(",")} />}
     </head>
