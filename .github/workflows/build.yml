@@ -19,6 +19,7 @@ on:
         type: boolean
 
 env:
+  ASTRO_TELEMETRY_DISABLED: 1
   DO_NOT_TRACK: 1
   HUSKY: 0
 

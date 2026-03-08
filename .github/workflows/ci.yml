@@ -8,9 +8,15 @@ on:
       - '.github/workflows/**'
       - 'src/**'
       - 'astro.config.mjs'
+      - 'eslint.config.js'
       - 'package-lock.json'
       - 'package.json'
+      - 'prettier.config.js'
       - 'tsconfig.json'
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.event.pull_request.number }}"
+  cancel-in-progress: true
 
 permissions:
   contents: read

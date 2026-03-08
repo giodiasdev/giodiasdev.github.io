@@ -8,8 +8,10 @@ on:
       - 'public/**'
       - 'src/**'
       - 'astro.config.mjs'
+      - 'eslint.config.js'
       - 'package-lock.json'
       - 'package.json'
+      - 'prettier.config.js'
       - 'tsconfig.json'
   workflow_dispatch:
 
