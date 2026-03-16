@@ -1,12 +1,12 @@
 ---
-import ProseLayout from "./ProseLayout.astro";
+import MainLayout from "./MainLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<ProseLayout
+<MainLayout
     title={frontmatter.title}
     description={frontmatter.description}
     keywords={frontmatter.keywords}
 >
     <slot />
-</ProseLayout>
+</MainLayout>
