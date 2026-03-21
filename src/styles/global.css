@@ -1,63 +1,167 @@
 @import "tailwindcss";
 
-.prose h1 {
-    @apply font-bold leading-tight tracking-tight mb-4 text-3xl;
+@theme {
+    --color-neutral-0: #ffffff;
+
+    --color-surface-base: var(--color-neutral-0);
+    --color-surface-subtle: var(--color-neutral-50);
+    --color-surface-muted: var(--color-neutral-100);
+    --color-surface-inverse: var(--color-neutral-900);
+
+    --color-fg-primary: var(--color-neutral-900);
+    --color-fg-body: var(--color-neutral-700);
+    --color-fg-muted: var(--color-neutral-500);
+    --color-fg-disabled: var(--color-neutral-400);
+    --color-fg-inverse: var(--color-neutral-0);
+
+    --color-line-default: var(--color-neutral-200);
+    --color-line-strong: var(--color-neutral-300);
+    --color-line-focus: var(--color-indigo-600);
+
+    --color-brand-default: var(--color-indigo-600);
+    --color-brand-hover: var(--color-indigo-700);
+    --color-brand-active: var(--color-indigo-800);
+    --color-brand-subtle: var(--color-indigo-50);
+    --color-brand-muted: var(--color-indigo-100);
+    --color-brand-fg: var(--color-indigo-600);
+    --color-brand-on: var(--color-neutral-0);
+
+    --color-success-default: var(--color-emerald-600);
+    --color-success-subtle: var(--color-emerald-50);
+    --color-success-muted: var(--color-emerald-100);
+    --color-success-fg: var(--color-emerald-700);
+    --color-success-on: var(--color-neutral-0);
+
+    --color-warning-default: var(--color-amber-500);
+    --color-warning-subtle: var(--color-amber-50);
+    --color-warning-fg: var(--color-amber-600);
+    --color-warning-on: var(--color-neutral-0);
+
+    --color-danger-default: var(--color-red-600);
+    --color-danger-subtle: var(--color-red-50);
+    --color-danger-fg: var(--color-red-600);
+    --color-danger-on: var(--color-neutral-0);
 }
 
-.prose h2 {
-    @apply font-semibold leading-tight tracking-tight mt-8 mb-4 text-2xl;
-}
+@layer theme {
+    :root,
+    :host {
+        @variant dark {
+            --color-surface-base: #0a0a0a;
+            --color-surface-subtle: var(--color-neutral-950);
+            --color-surface-muted: var(--color-neutral-800);
+            --color-surface-inverse: var(--color-neutral-0);
 
-.prose h3 {
-    @apply font-semibold leading-tight tracking-tight mt-5 mb-4 text-xl;
-}
+            --color-fg-primary: #ededed;
+            --color-fg-body: var(--color-neutral-300);
+            --color-fg-muted: var(--color-neutral-500);
+            --color-fg-disabled: var(--color-neutral-600);
+            --color-fg-inverse: var(--color-neutral-950);
 
-.prose h4 {
-    @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-lg;
-}
+            --color-line-default: var(--color-neutral-800);
+            --color-line-strong: var(--color-neutral-700);
+            --color-line-focus: var(--color-indigo-400);
 
-.prose h5 {
-    @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-base;
-}
+            --color-brand-default: var(--color-indigo-500);
+            --color-brand-hover: var(--color-indigo-400);
+            --color-brand-active: var(--color-indigo-300);
+            --color-brand-subtle: var(--color-indigo-950);
+            --color-brand-muted: #1e1b4b;
+            --color-brand-fg: var(--color-indigo-400);
+            --color-brand-on: var(--color-neutral-0);
 
-.prose h6 {
-    @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-sm;
-}
+            --color-success-default: var(--color-emerald-500);
+            --color-success-subtle: var(--color-emerald-950);
+            --color-success-muted: #022c22;
+            --color-success-fg: var(--color-emerald-400);
+            --color-success-on: var(--color-neutral-0);
 
-.prose p {
-    @apply mb-4 last:mb-0;
-}
+            --color-warning-default: var(--color-amber-400);
+            --color-warning-subtle: var(--color-amber-950);
+            --color-warning-fg: var(--color-amber-400);
+            --color-warning-on: var(--color-neutral-900);
 
-.prose a {
-    @apply transition-colors text-[#4a4a4a];
-    @variant hover {
-        @apply text-[#1a1a1a];
-    }
-    @variant dark {
-        @apply text-[#b3b3b3];
-        @variant hover {
-            @apply text-[#f0f0f0];
+            --color-danger-default: var(--color-red-500);
+            --color-danger-subtle: var(--color-red-950);
+            --color-danger-fg: var(--color-red-400);
+            --color-danger-on: var(--color-neutral-0);
+
+            --shadow-accent: 0 4px 14px 0 rgb(99 102 241 / 0.4);
         }
     }
 }
 
-.prose ol {
-    @apply list-decimal list-inside mb-4;
-    @variant last {
-        @apply mb-0;
+@layer components {
+    .anchor {
+        @apply text-brand-fg underline decoration-transparent transition-[text-decoration-color] duration-100 ease-out;
+        @variant hover {
+            @apply text-brand-hover decoration-current;
+        }
     }
-}
 
-.prose ul {
-    @apply list-disc list-inside mb-4;
-    @variant last {
-        @apply mb-0;
-    }
-}
+    .prose {
+        @apply bg-surface-base text-fg-body;
+        & h1 {
+            @apply font-bold leading-tight tracking-tight mb-4 text-3xl text-fg-primary;
+        }
 
-.prose li {
-    @apply mb-1;
-    @variant last {
-        @apply mb-0;
+        & h2 {
+            @apply font-semibold leading-tight tracking-tight mt-8 mb-4 text-2xl text-fg-primary;
+        }
+
+        & h3 {
+            @apply font-semibold leading-tight tracking-tight mt-5 mb-4 text-xl text-fg-primary;
+        }
+
+        & h4 {
+            @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-lg text-fg-primary;
+        }
+
+        & h5 {
+            @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-base text-fg-primary;
+        }
+
+        & h6 {
+            @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-sm text-fg-primary;
+        }
+
+        & p {
+            @apply mb-4 last:mb-0;
+        }
+
+        & a {
+            @apply text-brand-fg underline decoration-transparent transition-[text-decoration-color] duration-100 ease-out;
+            @variant hover {
+                @apply text-brand-hover decoration-current;
+            }
+        }
+
+        & ol {
+            @apply list-decimal list-inside mb-4;
+            @variant last {
+                @apply mb-0;
+            }
+        }
+
+        & ul {
+            @apply list-disc list-inside mb-4;
+            @variant last {
+                @apply mb-0;
+            }
+        }
+
+        & li {
+            @apply mb-1;
+            @variant last {
+                @apply mb-0;
+            }
+        }
+
+        & code,
+        & kbd,
+        & samp,
+        & pre {
+            @apply font-mono;
+        }
     }
 }
