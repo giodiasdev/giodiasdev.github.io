@@ -102,27 +102,27 @@
     .prose {
         @apply bg-surface-base text-fg-body;
         & h1 {
-            @apply font-bold leading-tight tracking-tight mb-4 text-3xl;
+            @apply font-bold leading-tight tracking-tight mb-4 text-3xl text-fg-primary;
         }
 
         & h2 {
-            @apply font-semibold leading-tight tracking-tight mt-8 mb-4 text-2xl;
+            @apply font-semibold leading-tight tracking-tight mt-8 mb-4 text-2xl text-fg-primary;
         }
 
         & h3 {
-            @apply font-semibold leading-tight tracking-tight mt-5 mb-4 text-xl;
+            @apply font-semibold leading-tight tracking-tight mt-5 mb-4 text-xl text-fg-primary;
         }
 
         & h4 {
-            @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-lg;
+            @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-lg text-fg-primary;
         }
 
         & h5 {
-            @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-base;
+            @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-base text-fg-primary;
         }
 
         & h6 {
-            @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-sm;
+            @apply font-semibold leading-tight tracking-tight mt-2 mb-4 text-sm text-fg-primary;
         }
 
         & p {
