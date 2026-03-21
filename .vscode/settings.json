@@ -14,6 +14,9 @@
     "[typescriptreact]": {
         "editor.formatOnSave": true
     },
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
     "eslint.validate": [
         "astro",
         "javascript",

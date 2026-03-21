@@ -8,5 +8,7 @@ const { frontmatter } = Astro.props;
     description={frontmatter.description}
     keywords={frontmatter.keywords}
 >
-    <slot />
+    <article class="prose">
+        <slot />
+    </article>
 </MainLayout>
