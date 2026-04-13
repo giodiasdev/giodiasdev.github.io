@@ -13,10 +13,12 @@ export default defineConfig([
         ".devcontainer/",
         ".github/",
         ".husky/",
+        ".pnpm-store/",
         ".vscode/",
         "dist/",
         "node_modules/",
-        "package-lock.json",
+        "pnpm-lock.yaml",
+        "pnpm-workspace.yaml",
         "package.json",
     ]),
     {

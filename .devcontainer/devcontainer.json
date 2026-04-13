@@ -26,7 +26,6 @@
 			"extensions": [
 				"astro-build.astro-vscode",
 				"bradlc.vscode-tailwindcss",
-				"mhutchie.git-graph",
 				"seatonjiang.gitmoji-vscode",
 				"unifiedjs.vscode-mdx"
 			]

@@ -1,11 +1,11 @@
 #! /usr/bin/env bash
 
 # Node.js setup
-npm install -g npm@latest
-if [ -f "package-lock.json" ]; then
-    npm ci
+pnpm self-update
+if [ -f "pnpm-lock.yaml" ]; then
+    pnpm install --frozen-lockfile
 elif [ -f "package.json" ]; then
-    npm install
+    pnpm install
 fi
 
 # Create .env file if it doesn't exist

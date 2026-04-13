@@ -1,6 +1,6 @@
 # 👨‍💻 [giodias.com](https://giodias.com)
 
-[![CD](https://github.com/giodiasdev/giodiasdev.github.io/actions/workflows/cd.yml/badge.svg)](https://github.com/giodiasdev/giodiasdev.github.io/actions/workflows/cd.yml)
+[![CD](https://github.com/giodiasdev/giodiasdev.github.io/actions/workflows/cd.yaml/badge.svg)](https://github.com/giodiasdev/giodiasdev.github.io/actions/workflows/cd.yaml)
 
 Welcome to my personal website! This is a portfolio and blog showcasing my work, projects, and thoughts.
 

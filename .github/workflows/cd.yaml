@@ -9,7 +9,7 @@ on:
       - 'src/**'
       - 'astro.config.mjs'
       - 'eslint.config.js'
-      - 'package-lock.json'
+      - 'pnpm-lock.yaml'
       - 'package.json'
       - 'prettier.config.js'
       - 'tsconfig.json'
@@ -38,7 +38,7 @@ jobs:
   build:
     name: Build
     needs: setup
-    uses: ./.github/workflows/build.yml
+    uses: ./.github/workflows/build.yaml
     with:
       site_url: ${{ needs.setup.outputs.site_url }}
       base_path: ${{ needs.setup.outputs.base_path }}
